@@ -15,8 +15,8 @@ public class OrdemDeServico
     public IReadOnlyCollection<Atendimento> Atendimentos => _atendimentos.AsReadOnly();
     public IReadOnlyCollection<HistoricoStatusOs> Historico => _historico.AsReadOnly();
 
-    public List<Atendimento> _atendimentos = [];
-    public List<HistoricoStatusOs> _historico = [];
+    private readonly List<Atendimento> _atendimentos = [];
+    private readonly List<HistoricoStatusOs> _historico = [];
     
     // EF Core
     private OrdemDeServico() {}

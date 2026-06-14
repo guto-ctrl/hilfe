@@ -12,8 +12,8 @@ public class Usuario
     // Relacionamento
     public IReadOnlyCollection<Atendimento> Atendimentos => _atendimentos.AsReadOnly();
     public IReadOnlyCollection<HistoricoStatusOs> Historicos => _historicos.AsReadOnly();
-    private List<Atendimento> _atendimentos = [];
-    private List<HistoricoStatusOs> _historicos = [];
+    private readonly List<Atendimento> _atendimentos = [];
+    private readonly List<HistoricoStatusOs> _historicos = [];
 
     // EF Core
     private Usuario() {}

@@ -9,7 +9,7 @@ public class Servico
 
     // Relacionamento
     public IReadOnlyCollection<ServicoAtendimento> Atendimentos => _atendimentos.AsReadOnly();
-    private List<ServicoAtendimento> _atendimentos = [];
+    private readonly List<ServicoAtendimento> _atendimentos = [];
 
     // EF Core
     private Servico() {}
