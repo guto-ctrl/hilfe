@@ -8,8 +8,9 @@ public class Servico
     public bool Ativo { get; private set; }
 
     // Relacionamento
-    public ServicoAtendimento ServicoAtendimento { get; private set; } = null!;
+    public IReadOnlyCollection<ServicoAtendimento> Atendimentos => _atendimentos.AsReadOnly();
+    private List<ServicoAtendimento> _atendimentos = [];
 
-    private Servico() {}
     // EF Core
+    private Servico() {}
 }

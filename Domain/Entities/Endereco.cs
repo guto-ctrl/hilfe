@@ -9,6 +9,6 @@ public class Endereco
     // Relacionamento
     public Cliente Cliente { get; private set; } = null!; 
 
-    private Endereco() {}
     // EF Core
+    private Endereco() {}
 }

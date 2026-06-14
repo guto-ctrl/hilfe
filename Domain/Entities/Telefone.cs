@@ -9,6 +9,6 @@ public class Telefone
     // Relacionamento
     public Cliente Cliente { get; private set; } = null!;
 
-    private Telefone() {}
     // EF Core 
+    private Telefone() {}
 }

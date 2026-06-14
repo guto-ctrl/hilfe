@@ -1,3 +1,4 @@
+using Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities;
@@ -6,7 +7,7 @@ public class Cliente
 {
     public int Id { get; private set; }
     public string Nome { get; private set; } = string.Empty;
-    // public TipoCliente Tipo { get; private set; } // precisa do enum
+    public TipoCliente Tipo { get; private set; }
     public string Documento { get; private set; } = string.Empty;
 
     // Relacionamentos
@@ -16,12 +17,12 @@ public class Cliente
     public IReadOnlyCollection<OrdemDeServico> OrdensDeServicos => _ordensDeServico.AsReadOnly();
     public IReadOnlyCollection<Contrato> Contratos => _contratos.AsReadOnly();
 
-    public readonly List<Telefone> _telefones = [];
-    public readonly List<Email> _emails = [];
-    public readonly List<Endereco> _enderecos = [];
-    public readonly List<OrdemDeServico> _ordensDeServico = [];
-    public readonly List<Contrato> _contratos = [];
+    private readonly List<Telefone> _telefones = [];
+    private readonly List<Email> _emails = [];
+    private readonly List<Endereco> _enderecos = [];
+    private readonly List<OrdemDeServico> _ordensDeServico = [];
+    private readonly List<Contrato> _contratos = [];
 
-    private Cliente() {}
     // Ef Core 
+    private Cliente() {}
 }

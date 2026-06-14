@@ -9,6 +9,6 @@ public class Email
     // Relacionamento
     public Cliente Cliente { get; private set; } = null!;
 
-    private Email() {}
     // EF Core 
+    private Email() {}
 }
